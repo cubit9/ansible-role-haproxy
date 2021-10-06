@@ -1,6 +1,6 @@
 # Ansible Role: HAProxy
 
-[![Build Status](https://travis-ci.com/justereseau/ansible-role-haproxy.svg?branch=master)](https://travis-ci.com/justereseau/ansible-role-haproxy)
+[![CI](https://github.com/cubit9/ansible-role-haproxy/actions/workflows/ci.yml/badge.svg)](https://github.com/cubit9/ansible-role-haproxy/actions/workflows/ci.yml)
 
 Installs HAProxy on RedHat/CentOS and Debian/Ubuntu Linux servers, but Molecule say not. So RIP Molecule...
 
