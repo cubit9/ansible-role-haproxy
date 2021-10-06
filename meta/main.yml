@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: cubit9
+  description: HAProxy installation and configuration.
+  company: Cubit9 Technologies Ltd.
+
+  license: "license (BSD, MIT)"
+
+  min_ansible_version: 2.8
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+
+  galaxy_tags:
+    - web
+    - networking
+    - cloud
+    - haproxy
+    - loadbalancer
+    - http
+
+dependencies: []

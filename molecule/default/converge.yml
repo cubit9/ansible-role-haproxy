@@ -1,0 +1,27 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    haproxy_user: root
+    haproxy_group: root
+
+    haproxy_backend_servers:
+      - name: app1
+        address: 127.0.0.1:8080
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=yes cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+    - name: Enable networking
+      copy:
+        dest: "/etc/sysconfig/network"
+        content: NETWORKING=yes
+        mode: 0644
+      when: ansible_os_family == 'RedHat'
+
+  roles:
+    - role: cubit9.haproxy
